@@ -1,0 +1,28 @@
+<div class="container minesweeper-board-page">
+  <div class="card">
+    <div class="card-header text-center">
+      <h2>Board: <%= @board.name %></h2>
+      <p>Created by: <%= @board.email %></p>
+    </div>
+    <div class="card-body">
+      <div class="board-wrapper">
+        <div class="board">
+          <% @generated_board.each do |row| %>
+            <div class="board-row">
+              <% row.each do |cell| %>
+                <% if cell == "*" %>
+                  <span class="cell mine">💣</span>
+                <% else %>
+                  <span class="cell empty">⬜</span>
+                <% end %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      <%= link_to "View Recent Boards", boards_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

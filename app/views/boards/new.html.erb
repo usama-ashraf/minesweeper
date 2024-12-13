@@ -1,0 +1,55 @@
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Generate a Minesweeper Board
+    </div>
+
+    <div class="card-body">
+      <% if @board.errors.any? %>
+        <div class="alert alert-danger">
+          <h4>There were errors in your submission</h4>
+          <ul>
+            <% @board.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <p>Please fill out the form below to generate your Minesweeper board:</p>
+
+      <%= form_with model: @board, local: true do |f| %>
+        <div>
+          <%= f.label :email, "Your Email" %>
+          <%= f.email_field :email, placeholder: "Enter your email", required: true %>
+        </div>
+
+        <div>
+          <%= f.label :name, "Board Name" %>
+          <%= f.text_field :name, placeholder: "Enter board name", required: true %>
+        </div>
+
+        <div>
+          <%= f.label :width, "Board Width" %>
+          <%= f.number_field :width, value: 5, required: true, min: 1, placeholder: "Enter width (min: 1)" %>
+        </div>
+
+        <div>
+          <%= f.label :height, "Board Height" %>
+          <%= f.number_field :height, value: 5, required: true, min: 1, placeholder: "Enter height (min: 1)" %>
+        </div>
+
+        <div>
+          <%= f.label :mines, "Number of Mines" %>
+          <%= f.number_field :mines, value: 5, required: true, min: 1, placeholder: "Enter number of mines (min: 1)" %>
+        </div>
+
+        <div>
+          <%= f.submit "Generate Board", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to "View Recent Boards", boards_path, class: "btn btn-primary" %>
+  </div>
+</div>

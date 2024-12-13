@@ -1,0 +1,292 @@
+td.mine {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+td.empty {
+    background-color: lightgrey;
+    text-align: center;
+    font-size: 18px;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.alert h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+form input:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+/* Minesweeper Board Page Specific Styles */
+.minesweeper-board-page .container {
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.minesweeper-board-page .card {
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.minesweeper-board-page .card-header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.minesweeper-board-page .card-body {
+    padding: 15px;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.minesweeper-board-page .board-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.minesweeper-board-page .board {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.minesweeper-board-page .board-row {
+    display: flex;
+    gap: 2px;
+}
+
+.minesweeper-board-page .cell {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.minesweeper-board-page .cell.mine {
+    background-color: #ffdddd;
+    border-color: #ff5555;
+    color: #ff0000;
+}
+
+.minesweeper-board-page .cell.empty {
+    background-color: #ffffff;
+    border-color: #ddd;
+}
+
+.minesweeper-board-page .card-footer {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+}
+.btn-primary {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.recent-boards h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.list-group-item strong {
+    font-weight: bold;
+}
+
+.list-group-item .btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.list-group-item .btn-primary {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+}
+
+.list-group-item .btn-primary:hover {
+    background-color: #45a049;
+}
+
+.dataTables_wrapper {
+    margin-top: 20px;
+}
+
+table.dataTable thead th {
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+}
+
+table.dataTable tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+

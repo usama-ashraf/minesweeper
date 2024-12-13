@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header d-flex justify-content-between align-items-center mb-4">
+    <h1>Welcome to Minesweeper Generator</h1>
+    <%= link_to "Generate New Board", new_board_path, class: "btn btn-primary btn-sm" %>
+  </div>
+
+  <div class="recent-boards">
+    <h3>Recently Generated Boards</h3>
+    <ul class="list-group mt-3">
+      <% @boards.each do |board| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <strong><%= link_to board.name, board_path(board) %></strong>
+            by <%= board.email %>
+            on <%= board.created_at.strftime("%d %b %Y, %H:%M %p") %>
+          </div>
+          <%= link_to "View", board_path(board), class: "btn btn-primary btn-sm" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <%= link_to "View all generated boards", all_boards_boards_path, class: "btn btn-primary btn-sm" %>
+</div>
