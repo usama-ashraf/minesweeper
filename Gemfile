@@ -17,7 +17,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 # pagination
-gem 'will_paginate', '~> 3.3'
+gem 'will_paginate', '~> 4.0'
 # datatables
 gem 'ajax-datatables-rails'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
